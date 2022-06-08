@@ -38,8 +38,8 @@ nav a{
 }
 nav .animation{
 	position: absolute;
-	/*height: 100%;*/
-	height: 5px; 
+	height: 100%;
+	/*height: 5px; */
 	top: 0;
 	/*bottom: 5px; */
 	z-index: 0;

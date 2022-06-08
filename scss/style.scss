@@ -1,0 +1,46 @@
+@import "../scss/localfonts";
+@import "../scss/helpers";
+@import "../scss/buttons";
+@import "../scss/work";
+
+body {
+	background-color: $body-color;
+}
+header {
+	display: flex;
+}
+.site-container {
+	background-color: $bg-color;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 72px;
+	border-radius: 15px;
+}
+.logo {
+	width: 120px;
+	height: 103px;
+	margin: 0 30px 72px 0;
+	background-color: $accent-color;
+	color: $bg-color;
+	font-size: 60px;
+	text-align: center;
+	line-height: 103px;
+	border-radius: 15px 0 0 15px;
+}
+.author_name {
+	color: $accent-color;
+	font-size: 60px;
+}
+.page_title {
+	color: $accent-color;
+	font-size: 30px;
+}
+a {
+	display: block;
+   text-align: center;
+   height: 100%;
+}
+img {
+	width: 100%;
+	object-fit: cover;
+}

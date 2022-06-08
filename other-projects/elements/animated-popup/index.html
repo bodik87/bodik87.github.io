@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Название</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="content">
+			<img class="david" src="img/david.png" alt="">
+			<br>
+			<h2>Давид</h2>
+			<br>
+			<p>Давид - добрый, нежный, заботливый парниша!</p>
+		</div>
+		<div class="toogleBtn">
+
+		</div>
+	</div>
+
+	<script>
+		let toogleBtn = document.querySelector('.toogleBtn');
+		let container = document.querySelector('.container');
+		toogleBtn.onclick = function () {
+			container.classList.toggle('active');
+		}
+	</script>
+</body>
+
+</html>

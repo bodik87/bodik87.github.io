@@ -1,0 +1,35 @@
+@import "../scss/variables";
+
+.story {
+	max-width: 1200px;
+	margin: 65px auto 0 auto;
+	background: $blue-color;
+	padding: 31px 0 25px 0;
+}
+
+.story-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.story-text {
+	max-width: 640px;
+}
+
+.story-btn {
+	width: 269px;
+	height: 64px;
+	line-height: 64px;
+	background: $red-color;
+	border-radius: 5px;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	padding: 0 10px;
+	white-space: nowrap;
+	transition: $transition-speed;
+	&:hover {
+		background-color: $hover-red;
+		transition: $transition-speed;
+	}
+}

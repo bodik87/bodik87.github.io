@@ -1,0 +1,21 @@
+// Partials "HELPERS" includes: variables, templates and mixins
+
+// Variables / $my-color: #1426c6; /
+// for clear css :root {--name: 1px;} / use var(--name);
+
+// Templates / %template-name{} / use @extend %template-name; /
+
+// Mixins
+// @mixin testbox($wpx, $hpx, $bgc) {
+//    width: $wpx;
+//    height: $hpx;
+// 	background-color: $bgc;
+// }
+// .my-box {
+// 	@include testbox(150px, 100px, green);
+// }
+
+$body-color: #f5f5f5;
+$bg-color: #cccfdb;
+$accent-color: black;
+
