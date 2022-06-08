@@ -1,3 +1,3 @@
 # bodik87.github.io
 
-bodik87.github.io/site 1/index.html
+a href="https://bodik87.github.io/site 1 grid adaptation/index.html">Адаптивный сайт с девочками</a>
