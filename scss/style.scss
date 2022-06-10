@@ -2,6 +2,7 @@
 @import "../scss/helpers";
 @import "../scss/buttons";
 @import "../scss/work";
+*	{-webkit-tap-highlight-color: transparent;}
 
 body {
 	background-color: $body-color;
