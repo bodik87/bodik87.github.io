@@ -147,15 +147,14 @@ img, .text {
 		backdrop-filter: blur( 15px );
 		-webkit-backdrop-filter: blur( 15px );
 		z-index: 4;
+		overflow: hidden;
 	 }
 	 .hamb__field {
 		padding: 20px;
 		cursor: pointer;
-		overflow: hidden;
 	 }
 	.hamb__field:active {
-		background: rgba( 255, 255, 255, 0.2 );
-		color: rgb(255, 0, 191);
+		background: rgba( 255, 255, 255, 1 );
 	}
 	 
 	 .bar {
