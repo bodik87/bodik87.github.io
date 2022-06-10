@@ -154,9 +154,6 @@ img, .text {
 		padding: 20px;
 		cursor: pointer;
 	 }
-	.hamb__field:active {
-		background: rgba( 255, 255, 255, 1 );
-	}
 	 
 	 .bar {
 		display: block;
