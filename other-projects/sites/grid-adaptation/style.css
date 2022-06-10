@@ -237,7 +237,7 @@ img, .text {
 		color: #3f3f3f;
 		text-decoration: none;
 	 }
-	 .menu > a:hover {
+	 .menu > a:hover, a:active {
 		background-color: rgba(255, 255, 255, 1);
 	 }
 	 .hamb__field.active .bar:nth-child(2) {
