@@ -29,8 +29,8 @@ body {
 }
 
 .container.active {
-	width: 400px;
-	height: 400px;
+	width: 300px;
+	height: 300px;
 	transition-delay: 0.5s;
 }
 
@@ -59,7 +59,7 @@ body {
 	flex-direction: column;
 	flex-direction: column;
 	text-align: center;
-	min-width: 400px;
+	min-width: 300px;
 	padding: 40px;
 	color: #fff;
 	opacity: 0;
@@ -99,11 +99,11 @@ body {
 	background: #ff5a57;
 }
 
-.david {
-	width: 150px;
+.photo {
+	width: 100px;
 }
 
 .content {
-	height: 400px;
+	height: 300px;
 	overflow: hidden;
 }
