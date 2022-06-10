@@ -17,6 +17,7 @@ const links = Array.from(menu.children);
 links.forEach((link) => {
   link.addEventListener("click", closeOnClick);
 });
+popup.addEventListener("click", closeOnClick);
 
 function closeOnClick() {
   popup.classList.remove("open");
