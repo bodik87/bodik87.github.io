@@ -151,7 +151,13 @@ img, .text {
 	 .hamb__field {
 		padding: 20px;
 		cursor: pointer;
+		overflow: hidden;
 	 }
+	.hamb__field:active {
+		background: rgba( 255, 255, 255, 0.2 );
+		color: rgb(255, 0, 191);
+	}
+	 
 	 .bar {
 		display: block;
 		width: 30px;
