@@ -2,6 +2,9 @@
 @import "../scss/helpers";
 @import "../scss/buttons";
 
+.list_menu > ul > li {
+	padding: 0 30px;
+}
 .list_menu > ul > li > a {
 	font-size: 25px;
 	color: black;
@@ -9,27 +12,35 @@
 	display: block;
 	&:hover {
 		background-color: aquamarine;
+		border-radius: 10px;
+	}
+	@media screen and (orientation: landscape) {
+		font-size: 18px;
+		padding: 15px 50px 15px 50px;
 	}
 }
-
+ul {
+	@media screen and (orientation: landscape) {
+		height: 100%;
+		overflow: auto;
+	}
+}
 .list_menu {
 	display: flex;
 	background-color: antiquewhite;
 	align-items: center;
 	position: fixed;
 	top: 20px;
-	left: -150px;
+	left: -220px;
 	border-radius: 0 20px 20px 0;
 	background: rgba( 255, 255, 255, 0.2 );
 	box-shadow: 0 0px 32px 0 rgba(163, 163, 163, 0.37);
 	backdrop-filter: blur( 15px );
 	-webkit-backdrop-filter: blur( 15px );
 	z-index: 4;
-	overflow: hidden;
 	transition: 0.5s; // длительность
 	transition-delay: 300ms; // задержка
-	transition-timing-function: cubic-bezier(0.68,-0.55,0.265,1.55);
-	
+	transition-timing-function: cubic-bezier(0.68,-0.55,0.265,1.55);	
 	& > ul > li:nth-child(1) {
 		padding-top: 20px;
 	}
@@ -37,9 +48,14 @@
 		padding-bottom: 20px;
 	}
 	&:hover {
-		transform: translateX(+130px);
+		transform: translateX(+165px);
 		transition: 0.5s;
-		// transition-delay: 100ms;
 		transition-timing-function: ease;
+		@media screen and (orientation: landscape) {
+			transform: translateX(+145px);
+		}
+	}
+	@media screen and (orientation: landscape) {
+		left: -200px;
 	}
 }
