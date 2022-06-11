@@ -20,8 +20,6 @@
 }
 
 .menu__btn {
-  display: flex;
-  align-items: center;
   position: fixed;
   top: 20px;
   left: 20px;
