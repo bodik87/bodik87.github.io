@@ -52,7 +52,7 @@ ul {
 		transition: 0.5s;
 		transition-timing-function: ease;
 		@media screen and (orientation: landscape) {
-			transform: translateX(+145px);
+			left: -35px;
 		}
 	}
 	@media screen and (orientation: landscape) {
