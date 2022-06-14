@@ -48,7 +48,7 @@ ul {
 		padding-bottom: 20px;
 	}
 	&:hover {
-		transform: translateX(+165px);
+		left: -55px;
 		transition: 0.5s;
 		transition-timing-function: ease;
 		@media screen and (orientation: landscape) {
