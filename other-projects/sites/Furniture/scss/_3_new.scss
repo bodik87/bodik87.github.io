@@ -1,0 +1,124 @@
+.new {
+    padding-top: 69px;
+    padding-bottom: 71px;
+
+    @media (max-width: 1200px) {
+        padding: 50px 0 50px 25px;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 23.6% 76.4%;
+
+    @media (max-width: 990px) {
+        grid-template-columns: 100%;
+    }
+}
+
+.grid_column-info {
+    padding-right: 25px;
+
+    @media (max-width: 991px) {
+        max-width: 100%;
+        padding-right: 14px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        max-width: 219px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 130%;
+        text-transform: capitalize;
+        margin-top: 31px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            flex: 1 1 auto;
+        }
+
+        @media (max-width: 390px) {
+            margin-top: 0;
+            max-width: 124px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 170%;
+        letter-spacing: 0.01em;
+        margin-top: 89px;
+
+        @media (max-width: 990px) {
+            flex: 1 1 auto;
+            font-size: 14px;
+            margin-top: 0;
+        }
+    }
+
+    &__check {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        text-decoration-line: underline;
+        color: #23262F;
+        margin-top: 89px;
+        position: relative;
+
+        @media (max-width: 1300px) {
+            display: none;
+        }
+
+        &::after {
+            content: '';
+            background: url(../img/3_new/promo-2_arrow.svg) no-repeat;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: -30px;
+            top: 4px;
+        }
+    }
+}
+
+.slide {
+    & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        border-radius: 5px;
+        object-fit: cover;
+        transition: 0.3s all;
+
+        &:hover {
+            transition: 0.3s all;
+            transform: scale(1.025);
+        }
+    }
+
+    & .description {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        transform: translateX(-50%);
+
+        @media (max-width: 900px) {
+            font-size: 18px;
+            bottom: 30px;
+        }
+    }
+}

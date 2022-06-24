@@ -1,0 +1,135 @@
+.we_create * {
+    color: #23262F;
+}
+
+.we_create {
+    padding-top: 74px;
+    padding-bottom: 74px;
+
+    @media (max-width: 992px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+
+.create__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+
+    @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    &__image {
+        grid-column: 1;
+
+        @media (max-width: 991px) {
+            grid-row: 2;
+        }
+
+        & img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 6px;
+
+            @media (max-width: 991px) {
+                grid-row: 2;
+                margin: 25px 0 0 0;
+            }
+        }
+    }
+}
+
+.create {
+    grid-column: 2;
+
+    @media (max-width: 991px) {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    &__title {
+        max-width: 481px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 130%;
+        text-transform: capitalize;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        max-width: 587px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 170%;
+        margin: 14px 0 35px 0;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 390px) {
+            font-size: 14px;
+        }
+    }
+
+    &__list {
+        padding-left: 48px;
+        margin-bottom: 25px;
+
+        @media (max-width: 390px) {
+            margin-bottom: 20px;
+            padding-left: 39px;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            position: relative;
+
+            @media (max-width: 390px) {
+                font-size: 16px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                background: url(../img/2_we_create/2_dot.svg) no-repeat;
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+                top: 3px;
+                left: -45px;
+
+                @media (max-width: 390px) {
+                    width: 18.6px;
+                    height: 18.6px;
+                    left: -36px;
+                }
+            }
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+
+            @media (max-width: 390px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

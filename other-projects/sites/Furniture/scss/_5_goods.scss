@@ -1,0 +1,209 @@
+.product {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @media (max-width: 1200px) {
+        padding: 50px 25px;
+    }
+}
+
+.promo {
+    &__title {
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 138%;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    &__text {
+        font-family: 'Saira';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 165%;
+        text-align: center;
+        margin: 16px auto 0 auto;
+        max-width: 539px;
+    }
+}
+
+.goods-grid {
+    display: grid;
+    max-width: 100%;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+    column-gap: 27px;
+
+    @media (max-width: 1300px) {
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 25px;
+    }
+
+    @media (max-width: 950px) {
+        grid-template-columns: repeat(2, minmax(160px, 290px));
+        column-gap: 20px;
+    }
+
+    @media (max-width: 389px) {
+        grid-template-columns: minmax(auto, 160px);
+        padding-top: 20px;
+        column-gap: 0;
+    }
+}
+
+.goods {
+
+    &_item {
+        padding-top: 60px;
+
+        @media (max-width: 650px) {
+            padding-top: 25px;
+        }
+
+        &_picture {
+            border: 1px solid #D9D9D9;
+            border-radius: 16px;
+            position: relative;
+            max-width: 290px;
+            height: 300px;
+            padding: 9px 10px 7px 10px;
+            display: grid;
+            align-items: center;
+
+            @media (max-width: 650px) {
+                width: 160px;
+                height: 170px;
+            }
+
+            &__img {
+                display: block;
+                margin: 0 auto;
+                border-radius: 16px;
+                object-fit: cover;
+                max-width: 100%;
+            }
+
+            &__add {
+                position: absolute;
+                right: 22px;
+                bottom: 16px;
+                transition: 0.1s;
+
+                @media (max-width: 650px) {
+                    width: 16px;
+                    height: 16px;
+                    right: 10px;
+                    bottom: 10px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 0.1s;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        &__title {
+            margin: 15px 0 0 0;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+            text-transform: capitalize;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media (max-width: 650px) {
+                max-width: 151px;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+        }
+
+        &__price {
+            margin: 8px 0 0 1px;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 650px) {
+                margin-top: 5px;
+            }
+
+            &__new {
+                font-size: 16px;
+                line-height: 165%;
+
+                @media (max-width: 650px) {
+                    font-size: 12px;
+                }
+            }
+
+            &__old {
+                margin: 0 0 0 18px;
+                font-size: 14px;
+                line-height: 165%;
+                text-decoration-line: line-through;
+                color: #23262F;
+                opacity: 0.5;
+
+                @media (max-width: 650px) {
+                    margin: 0 0 0 10px;
+                    font-size: 10px;
+                }
+            }
+
+        }
+    }
+}
+
+.slider-btn {
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .prev {
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            opacity: 0.2;
+            cursor: auto;
+        }
+    }
+
+    & .next {
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            opacity: 0.2;
+            cursor: auto;
+        }
+    }
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: -2px;
+    position: relative;
+    max-width: 110px;
+    padding: 0 30px;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    opacity: 1;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    opacity: 1;
+}
