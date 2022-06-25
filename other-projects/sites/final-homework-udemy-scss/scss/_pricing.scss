@@ -1,4 +1,5 @@
 @import "../scss/variables";
+@import "../scss/adaptive-parametrs";
 
 .pricing {
 	max-width: 1200px;
@@ -10,41 +11,50 @@
 
 .pricing-row {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 20px;
 }
 
 .pricing-card {
 	width: 318px;
-	min-height: 388px;
+	@include adaptiv-value("width", 318, 240, 2);
 	margin-top: 54px;
+	padding-left: 25px;
+	padding-right: 25px;
 	background-color: white;
 	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-bottom: 25px;
+
 	&__plan {
 		padding-top: 30px;
 		color: $dark-text;
-		font-size: 22px;
+		@include adaptiv-value("font-size", 22, 12, 2);
 		font-family: 'PT Serif', sans-serif;
 		letter-spacing: $letter-spacing03;
 	}
+
 	&__price {
 		padding-top: 10px;
-		font-size: 60px;
+		@include adaptiv-value("font-size", 60, 26, 2);
 		font-weight: bold;
 		color: $red-color;
 	}
+
 	&__services {
 		padding-top: 10px;
 	}
+
 	&__blue__btn {
 		display: block;
 		width: 205px;
 		height: 50px;
 		line-height: 50px;
 		border-radius: 5px;
-		font-size: 22px;
+		@include adaptiv-value("font-size", 22, 14, 2);
 		color: white;
 		text-align: center;
 		white-space: nowrap;
@@ -52,18 +62,24 @@
 		transition: $transition-speed;
 		padding: 0 10px;
 		margin: 30px auto 12px auto;
+
+		@media (max-width: 540px) {
+			width: 145px;
+		}
+
 		&:hover {
 			background-color: $hover-blue;
 			transition: $transition-speed;
 		}
 	}
+
 	&__red__btn {
 		display: block;
 		width: 205px;
 		height: 50px;
 		line-height: 50px;
 		border-radius: 5px;
-		font-size: 22px;
+		@include adaptiv-value("font-size", 22, 14, 2);
 		color: white;
 		text-align: center;
 		white-space: nowrap;
@@ -71,6 +87,11 @@
 		transition: $transition-speed;
 		padding: 0 10px;
 		margin: 30px auto 12px auto;
+
+		@media (max-width: 540px) {
+			width: 145px;
+		}
+
 		&:hover {
 			background-color: $hover-red;
 			transition: $transition-speed;

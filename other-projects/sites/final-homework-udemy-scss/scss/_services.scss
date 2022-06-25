@@ -1,28 +1,64 @@
 @import "../scss/variables";
+@import "../scss/adaptive-parametrs";
 
 .services {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
 .services-title {
 	margin-top: 36px;
+
+	@media (max-width: 991px) {
+		text-align: center;
+	}
+
 	& span {
 		color: $red-color;
 	}
 }
+
 .services-row {
-	margin-top: 84px;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@media (max-width: 850px) {
+		justify-content: center;
+	}
 }
+
 .services-card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	text-align: center;
+	margin-top: 84px;
+	column-gap: 10px;
+
+	@media (max-width: 950px) {
+		margin-top: 20px;
+		flex: 50%;
+	}
+
+	& img {
+		width: 150px;
+		height: 150px;
+		object-fit: contain;
+
+		@media (max-width: 880px) {
+			width: 90px;
+			height: 90px;
+		}
+	}
 }
+
 .services-card__text {
 	margin-top: 28px;
 	width: 185px;
+
+	@media (max-width: 880px) {
+		margin-top: 0.8em;
+	}
 }

@@ -1,37 +1,61 @@
 @import "../scss/variables";
+@import "../scss/adaptive-parametrs";
 
 .head {
 	max-width: 1200px;
-	height: 688px;
+	padding-bottom: 190px;
 	margin: 0 auto;
 	background: url('../img/header_bg.jpg') no-repeat;
+	object-fit: cover;
+
+	@media (max-width: 991px) {
+		padding-bottom: 50px;
+	}
 }
 
 header {
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 991px) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
-.logo img{
+.logo img {
 	margin: 18px 0 0 -16px;
 	height: 94px;
+
+	@media (max-width: 991px) {
+		margin: 18px 0 0 0;
+		height: 50px;
+	}
 }
 
 nav {
 	margin-top: 61px;
-	width: 505px;
+	max-width: 505px;
 	display: flex;
+
+	@media (max-width: 991px) {
+		margin-top: 0;
+		justify-content: center;
+	}
+
 	& a {
 		height: 37px;
-		font-size: 18px;
+		@include adaptiv-value("font-size", 18, 10, 2);
 		font-weight: 500;
 		color: white;
 		text-transform: uppercase;
 		z-index: 2;
 		line-height: 37px;
 		transition: $transition-speed;
-		padding: 0 15px;
+		@include adaptiv-value("padding-right", 15, 8, 0);
+		@include adaptiv-value("padding-left", 15, 8, 0);
 		letter-spacing: $letter-spacing03;
+
 		&:hover {
 			cursor: pointer;
 			padding: 0 15px;
@@ -43,19 +67,24 @@ nav {
 }
 
 .promo-title {
-	width: 640px;
+	max-width: 640px;
 	margin-top: 139px;
-	font-size: 90px;
+	@include adaptiv-value("font-size", 90, 24, 2);
 	font-weight: bold;
 	letter-spacing: -1.7px;
 	color: $blue-color;
 	line-height: 0.889;
+
+	@media (max-width: 991px) {
+		margin-top: 50px;
+	}
+
 	& span {
 		color: white;
 	}
 }
 
 .promo-text {
-	width: 478px;
-	margin-top: 38px;
+	max-width: 478px;
+	margin: 38px 0 0 0;
 }

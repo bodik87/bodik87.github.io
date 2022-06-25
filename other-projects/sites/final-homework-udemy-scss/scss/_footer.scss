@@ -1,4 +1,5 @@
 @import "../scss/variables";
+@import "../scss/adaptive-parametrs";
 
 .footer {
 	max-width: 1200px;
@@ -7,16 +8,18 @@
 }
 
 .footer-row {
-	height: 188px;
+	padding: 3em 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	column-gap: 10px;
 }
 
-.footer-text a{
+.footer-text a {
 	color: $red-color;
 }
 
 .footer-logo {
 	width: 212px;
+	@include adaptiv-value("width", 212, 140, 2);
 }

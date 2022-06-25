@@ -7,9 +7,19 @@
 @import "../scss/story";
 @import "../scss/pricing";
 @import "../scss/footer";
+@import "../scss/adaptive-parametrs";
 
-* {padding: 0; margin: 0; box-sizing: border-box;text-decoration: none;}
-ul, ol {list-style: none;}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -17,11 +27,12 @@ body {
 
 .container {
 	max-width: 995px;
-	margin: 0 100px;
+	@include adaptiv-value("margin-right", 100, 10, 2);
+	@include adaptiv-value("margin-left", 100, 10, 2);
 }
 
 .white__text {
-	font-size: 20px;
+	@include adaptiv-value("font-size", 20, 14, 2);
 	font-family: 'PT Serif', sans-serif;
 	color: white;
 	letter-spacing: $letter-spacing03;
@@ -29,14 +40,14 @@ body {
 
 .dark__text {
 	color: $dark-text;
-	font-size: 20px;
+	@include adaptiv-value("font-size", 20, 16, 2);
 	font-family: 'PT Serif', sans-serif;
 	letter-spacing: $letter-spacing03;
 }
 
 .title {
 	color: $blue-color;
-	font-size: 50px;
+	@include adaptiv-value("font-size", 50, 20, 2);
 	font-weight: bold;
 	letter-spacing: $letter-spacing03;
 }
