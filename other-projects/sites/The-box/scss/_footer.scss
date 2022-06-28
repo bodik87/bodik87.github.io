@@ -1,0 +1,11 @@
+footer {
+	background: #2947A9;
+	@include adaptiv-value("padding-top", 25, 15, 1);
+	@include adaptiv-value("padding-bottom", 25, 15, 1);
+}
+
+.footer-info {
+	@include adaptiv-value("font-size", 16, 11, 1);
+	line-height: 1.19;
+	color: #FFFFFF;
+}

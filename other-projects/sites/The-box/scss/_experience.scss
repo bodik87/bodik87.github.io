@@ -1,0 +1,56 @@
+.experience {
+	@include adaptiv-value("font-size", 16, 2, 1);
+	padding: 6.43em 0 3.56em 0;
+
+	&_row {
+		display: flex;
+		@include adaptiv-value("margin-left", 67, 0, 1);
+
+		&__image {
+			max-width: 641px;
+
+			& img {
+				max-width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+		}
+
+		&__column {
+			@include adaptiv-value("margin-left", 124, 10, 1);
+
+			&__title {
+				font-weight: 700;
+				font-size: 60px;
+				@include adaptiv-value("font-size", 60, 20, 1);
+				line-height: 1.16;
+				color: #2947A9;
+				max-width: 359px;
+			}
+
+			&__text {
+				@include adaptiv-value("font-size", 20, 12, 1);
+				line-height: 1.15;
+				color: #525B7A;
+				margin: 2em 0;
+				max-width: 330px;
+
+				@media (max-width: 600px) {
+					margin: 1em 0;
+				}
+			}
+
+			&__link {
+				max-width: 176px;
+				background: #2947A9;
+				border-radius: 2px;
+				font-weight: 600;
+				padding: 0.9em 1.11em;
+				line-height: 1.16;
+				@include adaptiv-value("font-size", 18, 10, 1);
+				text-align: center;
+				color: #FFFFFF;
+			}
+		}
+	}
+}

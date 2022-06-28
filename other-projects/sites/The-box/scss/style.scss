@@ -1,0 +1,99 @@
+@import "../scss/adaptive-parametrs";
+@import "../scss/hamburger";
+@import "../scss/slider1";
+@import "../scss/reputation";
+@import "../scss/about";
+@import "../scss/services";
+@import "../scss/experience";
+@import "../scss/consultation";
+@import "../scss/projects";
+@import "../scss/question";
+@import "../scss/footer";
+@import "../scss/information";
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: #14171F;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    @include adaptiv-value("padding-right", 112, 8, 1);
+    @include adaptiv-value("padding-left", 112, 8, 1);
+}
+
+.head {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo {
+        height: 47px;
+        margin: 16px 0;
+    }
+}
+
+nav>ul>a {
+    @include adaptiv-value("font-size", 18, 12, 1);
+    line-height: 21px;
+    padding: 5px 10px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        border: 1px solid rgba($color: #2947a9, $alpha: 0);
+    }
+
+    &:hover::before {
+        border: 1px solid rgba($color: #2947a9, $alpha: 1.0);
+        transition: 0.3s;
+    }
+
+    &:hover:last-child::before {
+        border: 1px solid rgba($color: #F9995D, $alpha: 1.0);
+        transition: 0.3s;
+    }
+
+
+    &:last-child {
+        color: #F9995D;
+    }
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-right", 20, 0, 1);
+    }
+}
+
+.main-title {
+    font-weight: 700;
+    @include adaptiv-value("font-size", 36, 18, 1);
+    line-height: 1.16;
+}
+
+.card-title {
+    font-weight: 700;
+    @include adaptiv-value("font-size", 20, 12, 1);
+    line-height: 1.15;
+}
+
+.side-title {
+    font-weight: 500;
+    line-height: 1.15;
+    @include adaptiv-value("font-size", 20, 10, 1);
+    text-transform: uppercase;
+    color: #2947A9;
+}

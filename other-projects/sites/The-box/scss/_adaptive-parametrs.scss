@@ -1,0 +1,35 @@
+//Адаптивое свойство
+$maxWidth: 1440;
+$minWidth: 320;
+$maxWidthContainer: 1440;
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	@if $type==1 {
+		//Только если меньше контейнера
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthContainer - $minWidth}));
+		}
+	}
+
+	@else if $type==2 {
+		//Только если больше контейнера
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth}));
+		}
+	}
+
+	@else {
+		//Всегда
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth}));
+	}
+}
+
+//@include adaptiv-value("padding", $startSize, $minSize, $type);
+// @include adaptiv-value("padding", 1, 1, 0);
+// font-size: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));

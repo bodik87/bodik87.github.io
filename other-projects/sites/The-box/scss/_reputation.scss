@@ -1,0 +1,36 @@
+.reputation {
+	@include adaptiv-value("font-size", 20, 10, 1);
+	padding: 2.5em 0 4.2em 0;
+
+	&_title {
+		text-align: center;
+		margin-bottom: 1.39em;
+	}
+
+	&_row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		@include adaptiv-value("column-gap", 78, 10, 1);
+		row-gap: 2em;
+
+		&__item {
+			flex: 0 1 292px;
+			border: 1.4px solid #E0E3EB;
+			border-radius: 4px;
+			padding: 1em 1em 2em 1em;
+
+			&__title {
+				margin: 0.9em 0;
+				color: #3D445C;
+			}
+
+			&__text {
+				@include adaptiv-value("font-size", 16, 12, 1);
+				line-height: 1.19;
+				color: #858EAD;
+			}
+		}
+	}
+
+}

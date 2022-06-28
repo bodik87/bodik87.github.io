@@ -1,0 +1,144 @@
+.projects {
+	margin-bottom: 8em;
+
+	@media (max-width: 600px) {
+		margin-bottom: 4em;
+	}
+}
+
+.projects_title {
+	margin-top: 2.44em;
+}
+
+.tabs {
+	display: flex;
+	max-width: 100%;
+	margin-top: 2.5em;
+
+	@media (max-width: 880px) {
+		flex-direction: column;
+		margin-top: 1em;
+	}
+}
+
+.tabs__nav {
+	display: flex;
+	flex-direction: column;
+	@include adaptiv-value("width", 416, 50, 1);
+
+	@media (max-width: 880px) {
+		flex-direction: row;
+		margin-bottom: 1.5em;
+		column-gap: 1em;
+	}
+}
+
+.tabs__btn {
+	margin-top: 0.8em;
+	font-weight: 500;
+	@include adaptiv-value("font-size", 24, 12, 1);
+	line-height: 1.17;
+	// text-align: center;
+	color: #C2C7D6;
+	cursor: pointer;
+	@include adaptiv-value("padding-left", 16, 12, 1);
+
+	@media (max-width: 880px) {
+		border-left: 0px;
+		padding-left: 0;
+	}
+}
+
+.tabs__btn_active {
+	font-weight: 700;
+	color: #2947A9;
+	cursor: default;
+	border-left: 4px solid #2947A9;
+	@include adaptiv-value("padding-left", 12, 8, 1);
+
+	@media (max-width: 880px) {
+		border-left: 0px;
+		border-bottom: 4px solid #2947A9;
+		padding-left: 0;
+	}
+}
+
+.tabs__btn:not(.tabs__btn_active):hover,
+.tabs__btn:not(.tabs__btn_active):focus {
+	background-color: #eee;
+}
+
+.tabs__content {}
+
+.tabs__pane {
+	display: none;
+}
+
+.tabs__pane_show {
+	display: block;
+}
+
+// <--- TABS end --->
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-row: repeat(2, 1fr);
+	@include adaptiv-value("gap", 32, 10, 1);
+
+	&_item {
+		& img {
+			display: block;
+			max-width: 100%;
+		}
+
+		&__row {
+			padding: 0.75em 1em 0.75em 0.75em;
+			max-width: 100%;
+			background: #2947A9;
+
+			&__title {
+				font-weight: 700;
+				@include adaptiv-value("font-size", 20, 10, 1);
+				line-height: 1.15;
+				color: #FFFFFF;
+			}
+
+			&__text {
+				margin-top: 0.66em;
+				@include adaptiv-value("font-size", 18, 9, 1);
+				line-height: 1.16;
+				color: #FFFFFF;
+			}
+		}
+	}
+
+	&_control {
+		margin-top: 2em;
+		display: flex;
+		justify-content: space-between;
+
+		&__back {
+			display: block;
+		}
+
+		&__next {
+			display: block;
+		}
+	}
+}
+
+.slider__container {
+	max-width: 800px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.slider__item {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.slider__item-container {
+	max-width: 100%;
+}
